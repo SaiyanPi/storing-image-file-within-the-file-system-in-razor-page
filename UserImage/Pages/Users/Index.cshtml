@@ -1,0 +1,58 @@
+﻿@page
+@model UserImage.Pages.Users.IndexModel
+@{
+    ViewData["Title"] = "Users";
+}
+
+<div class="container">
+    <div class="text-center mb-5 mt-5">
+        <a asp-page="Create" class="btn btn-info">
+            <i class="bi bi-plus-circle"></i> &nbsp;
+            Add New User
+        </a>
+    </div>
+
+    <div class="mb-2">
+        <a asp-page="/Index" class="btn btn-secondary" style="width:100px;"><i class="bi bi-arrow-left-square"></i>&nbsp; Back</a>
+    </div>
+
+   
+    <table class="table table-bordered table-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th style="background-color:cornflowerblue">Full Name</th>
+                <th style="background-color:cornflowerblue">Address</th>
+                <th style="background-color:cornflowerblue">Contact</th>
+                <th style="background-color:cornflowerblue">DoB</th>
+                <th style="background-color:cornflowerblue">Image</th>
+                <th style="background-color:cornflowerblue">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var obj in Model.Users)
+            {
+                <tr>
+                    @* <td>@(obj.FirstName +" "+@obj.MiddleName +" "+ @obj.LastName)</td> *@
+                    <td>@(String.Format("{0} {1} {2}", obj.FirstName, obj.MiddleName, obj.LastName))</td>
+                    <td>@obj.Address</td>
+                    <td>@obj.Contact</td>
+                    <td>@obj.DoB</td>
+                    @* <td>@obj.ImageName</td> *@
+                    <td><img src="/images/users/@obj.ImageName" width="75px" height="75px" style="border-radius:50%" /></td>
+                    
+                    <td>
+                        <div class="w-75 btn-group" role="group">
+                            <a asp-page="Edit" asp-route-id="" class="btn btn-warning mx-1">
+                                <i class="bi bi-pencil-square"></i>
+                            </a>
+                            <a asp-page="Delete" asp-route-id="" class="btn btn-danger mx-1">
+                                <i class="bi bi-trash"></i>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+ 
