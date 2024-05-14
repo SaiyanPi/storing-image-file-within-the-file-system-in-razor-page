@@ -1,3 +1,4 @@
+- DOTNET 6
 - bootswatch theme
 - upload image file using file system
 - CURD operation
