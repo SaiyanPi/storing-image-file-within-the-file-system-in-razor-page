@@ -20,7 +20,7 @@ namespace UserImage.Data
                     MiddleName = "",
                     LastName = "Karki",
                     Address = "Nepal, lalitpur",
-                    Contact = "000000000",
+                    Contact = "9801235622",
                     DoB = DateTime.Parse("1996-05-02"),
                     ImageName = "roshan.jpg"
                 },
@@ -30,7 +30,7 @@ namespace UserImage.Data
                     MiddleName = "Thapa",
                     LastName = "Magar",
                     Address = "Nepal, lalitpur",
-                    Contact = "000000001",
+                    Contact = "9823544444",
                     DoB = DateTime.Parse("1996-04-02"),
                     ImageName = "pustam.jpg"
                 },
@@ -40,7 +40,7 @@ namespace UserImage.Data
                     MiddleName = "",
                     LastName = "Thapa",
                     Address = "Nepal, lalitpur",
-                    Contact = "000000002",
+                    Contact = "9758440126",
                     DoB = DateTime.Parse("1996-09-02"),
                     ImageName = "sajan.jpg"
                 },
@@ -50,7 +50,7 @@ namespace UserImage.Data
                      MiddleName = "",
                      LastName = "Maharjan",
                      Address = "Nepal, lalitpur",
-                     Contact = "000000005",
+                     Contact = "9824500036",
                      DoB = DateTime.Parse("1996-01-02"),
                      ImageName = "brain.jpg"
                  },
@@ -60,7 +60,7 @@ namespace UserImage.Data
                      MiddleName = "",
                      LastName = "dolal",
                      Address = "Nepal, lalitpur",
-                     Contact = "000000007",
+                     Contact = "9754223450",
                      DoB = DateTime.Parse("1996-05-22"),
                      ImageName = "ritesh.jpg"
                  }

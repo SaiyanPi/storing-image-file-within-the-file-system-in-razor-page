@@ -1,0 +1,20 @@
+﻿﻿@* success pop-up *@
+@if (TempData["success"] != null)
+{
+    <script src="~/lib/jquery/dist/jquery.min.js"></script> @* jquery from the bottom of layout file *@
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script> @* link from 'toaster js' *@
+    <script type="text/javascript">
+        toastr.success('@TempData["success"]')
+    </script>
+   
+}
+@* error pop-up *@
+@if (TempData["error"] != null)
+{
+    <script src="~/lib/jquery/dist/jquery.min.js"></script> @* jquery from the bottom of layout file *@
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script> @* link from 'toaster js' *@
+    <script type="text/javascript">
+        toastr.error('@TempData["error"]')
+    </script>
+
+}

@@ -4,11 +4,24 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - UserImage</title>
-@*  <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> *@
+    
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <!--Bootswatch theme-->
     <link rel="stylesheet" href="~/css/DarkTheme.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" /> @* added for theme *@
     <link rel="stylesheet" href="~/UserImage.styles.css" asp-append-version="true" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> @* added for bootstrap icons *@
+    <!--for toastr pop-ups -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+    <!-- added for bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    
+
+
+    
+  
+    
+    @await RenderSectionAsync("Styles", required:false)
+    @* @await RenderSectionAsync("pageScripts", required: false); *@
 </head>
 <body>
     <header>
@@ -40,6 +53,8 @@
     </header>
     <div class="container">
         <main role="main" class="pb-3">
+            <!--toastr pop-ups -->
+           <partial name = "_Notification" />
             @RenderBody()
         </main>
     </div>
@@ -50,12 +65,31 @@
         </div>
     </footer>
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-   @*  <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script> *@
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+                            @*
+                            order:
+                            jQuery.js -> min.js
+                            jQueryUI.js -> ui.min.js
+                            jQueryUI.css -> ui.min.css
+                            *@
 
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    
+  
+    <!-- Initialising phone code -->
+   @*  <script src="~/js/phonecode.js" asp-append-version="true"></script> *@
+    <!-- Initialising DoB validation -->
+   @*  <script src="~/js/dobvalidation.js" asp-append-version="true"></script> *@
+   
+
 
     @await RenderSectionAsync("Scripts", required: false)
+    
 </body>
+
+
 </html>
+
+ 

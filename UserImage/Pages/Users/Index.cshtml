@@ -4,6 +4,13 @@
     ViewData["Title"] = "Users";
 }
 
+@section Styles {
+     <!-- added for datatables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.7/css/dataTables.dataTables.css" />
+}
+
+
+
 <div class="container">
     <div class="text-center mb-5 mt-5">
         <a asp-page="Create" class="btn btn-info">
@@ -14,12 +21,12 @@
 
     <div class="mb-2">
         <a asp-page="/Index" class="btn btn-secondary" style="width:100px;"><i class="bi bi-arrow-left-square"></i>&nbsp; Back</a>
-    </div>
-
-   
-    <table class="table table-bordered table-striped" style="width:100%">
+    </div class="mb-2">
+    <!-- table id for datatables -->
+    <table id= "myTable" class="table table-bordered table-striped" style="width:100%">
         <thead>
             <tr>
+                @* <th style="background-color:cornflowerblue">ID</th> *@
                 <th style="background-color:cornflowerblue">Full Name</th>
                 <th style="background-color:cornflowerblue">Address</th>
                 <th style="background-color:cornflowerblue">Contact</th>
@@ -28,10 +35,11 @@
                 <th style="background-color:cornflowerblue">Action</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody> 
             @foreach (var obj in Model.Users)
             {
                 <tr>
+                    @* <td>@obj.UserId</td> *@
                     @* <td>@(obj.FirstName +" "+@obj.MiddleName +" "+ @obj.LastName)</td> *@
                     <td>@(String.Format("{0} {1} {2}", obj.FirstName, obj.MiddleName, obj.LastName))</td>
                     <td>@obj.Address</td>
@@ -42,10 +50,10 @@
                     
                     <td>
                         <div class="w-75 btn-group" role="group">
-                            <a asp-page="Edit" asp-route-id="" class="btn btn-warning mx-1">
+                            <a asp-page="Update" asp-route-id="@obj.UserId" class="btn btn-warning mx-1">
                                 <i class="bi bi-pencil-square"></i>
                             </a>
-                            <a asp-page="Delete" asp-route-id="" class="btn btn-danger mx-1">
+                            <a asp-page="Delete" asp-route-id="@obj.UserId" class="btn btn-danger mx-1">
                                 <i class="bi bi-trash"></i>
                             </a>
                         </div>
@@ -54,5 +62,13 @@
             }
         </tbody>
     </table>
-</div>
+
+</div> 
+
  
+@section Scripts {
+    ﻿<script src="https://cdn.datatables.net/2.0.7/js/dataTables.js"></script>
+    <script src="~/js/datatables.js"></script>
+    
+}
+

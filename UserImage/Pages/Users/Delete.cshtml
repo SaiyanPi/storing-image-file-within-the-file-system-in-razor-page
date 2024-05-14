@@ -1,0 +1,86 @@
+﻿@page
+@model UserImage.Pages.Users.DeleteModel
+@{
+    ViewData["Title"] = "Delete User";
+}
+<div class="container py-5 h-100">
+    <div class="row justify-content-center align-items-center h-100">
+        <div class="col-12 col-lg-9 col-xl-7">
+            <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+                <div class="card-body p-4 p-md-5">
+                    <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Delete user</h3>
+
+                    <form method="post" enctype="multipart/form-data">
+
+                        <input hidden asp-for="user.UserId" />
+
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div data-mdb-input-init class="form-outline">
+                                    @* <input asp-for="UserImage" class="form-control" placeholder="" accept=".jpg, .png" />
+                                    <label class="form-label" asp-for="UserImage"></label>
+                                    <span asp-validation-for="UserImage" class="text-danger"></span> *@
+                                    <input asp-for="user.ImageName" class="form-control" hidden />
+                                    <img src="/images/users/@Model.user.ImageName" width="100px" height="100px" style="border-radius:50%" />
+                                  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div data-mdb-input-init class="form-outline">
+                                    <input type="text" asp-for="user.FirstName" class="form-control form-control-lg" readonly />
+                                    <label class="form-label" asp-for="user.FirstName"></label>
+                                  
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div data-mdb-input-init class="form-outline">
+                                    <input type="text" asp-for="user.MiddleName" class="form-control form-control-lg" readonly />
+                                    <label class="form-label" asp-for="user.MiddleName"></label>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div data-mdb-input-init class="form-outline">
+                                    <input type="text" asp-for="user.LastName" class="form-control form-control-lg" readonly />
+                                    <label class="form-label" asp-for="user.LastName"></label>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-4 d-flex align-items-center">
+                                <div data-mdb-input-init class="form-outline">
+                                    <input type="text" asp-for="user.DoB" class="form-control form-control-lg" readonly /> @* id for jQuery datepicker *@
+                                    <label asp-for="user.DoB" class="form-label"></label>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <input type="text" asp-for="user.Address" class="form-control form-control-lg" readonly />
+                                <label class="form-label" asp-for="user.Address"></label>
+                               
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div data-mdb-input-init class="form-outline">
+                                    <input type="tel" asp-for="user.Contact" class="form-control form-control-lg"  readonly />
+                                    <label class="form-label" asp-for="user.Contact"></label>
+                                    
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="mt-4 pt-2">
+                            <button class="btn btn-danger btn-lg" type="submit" style="width:100px; margin-right:8px;" onclick="return confirm('Are You sure you want to delete?')">Delete</button>
+                            <a asp-page="./Index" class="btn btn-secondary btn-lg " style="width:100px;" value="Back">Back</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

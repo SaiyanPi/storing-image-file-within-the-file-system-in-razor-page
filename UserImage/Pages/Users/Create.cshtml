@@ -4,78 +4,6 @@
     ViewData["Title"] = "Create User";
 }
 
-@* <form method="post" enctype="multipart/form-data">
-    <div class="border p-5 mt-4">
-        <div class="row pb-2">
-            <h2 class="text-primry pl-3" style="color:cadetblue">Add Student</h2>
-            <hr />
-        </div>
-        @* <div asp-validation-summary="All"></div> *@
-        @*<div class="mb-3">
-            <div class="form-control">
-                <label asp-for="Users.FirstName"></label>
-                <input asp-for="Users.FirstName" type="text" placeholder="First Name">
-            </div>
-
-            <div class="form-control">
-                <label asp-for="Users.FirstName"></label>
-                <input asp-for="Users.FirstName" type="text" placeholder="First Name">
-            </div>
-
-            <div class="form-control">
-                <label asp-for="Users.FirstName"></label>
-                <input asp-for="Users.FirstName" type="text" placeholder="First Name">
-            </div>
-
-        </div>
-        <div class="mb-3">
-
-            <label asp-for="Users.MiddleName"></label>
-            <input asp-for="Users.MiddleName" type="text" class="form-control" placeholder="Middle Name">
-
-        </div>
-        <div class="mb-3">
-
-            <label asp-for="Users.LastName"></label>
-            <input asp-for="Users.LastName" type="text" class="form-control" placeholder="Last Name'">
-
-        </div>
-        <div class="mb-3">
-
-            <label asp-for="Users.Address"></label>
-            <input asp-for="Users.Address" type="text" class="form-control" placeholder="City, Street">
-
-        </div>
-        <div class="mb-3">
-
-            <label asp-for="Users.Contact"></label>
-            <input asp-for="Users.Contact" type="text" class="form-control" placeholder="Phone Number">
-
-        </div>
-        <div class="mb-3">
-
-            <label asp-for="Users.DoB"></label>
-            <input asp-for="Users.DoB" type="datetime" class="form-control">
-
-        </div>
-        <div class="mb-3">
-
-            <label asp-for="Users.Contact"></label>
-            <input asp-for="Users.Contact" type="text" class="form-control" placeholder="Phone Number">
-
-        </div>
-        <div class="mb-3">
-
-            <label asp-for="Users.ImageName"></label>
-            <input asp-for="Users.ImageName" type="file" class="form-control">
-
-        </div>
-
-        <button type="submit" class="btn btn-info" style="width:100px;">Add</button>
-        <a asp-page="Index" class="btn btn-secondary" style="width:100px;">Back</a>
-    </div>
-</form> *@
-
     <div class="container py-5 h-100">
         <div class="row justify-content-center align-items-center h-100">
             <div class="col-12 col-lg-9 col-xl-7">
@@ -83,17 +11,22 @@
                     <div class="card-body p-4 p-md-5">
                         <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Add New User</h3>
                         <form method="post" enctype="multipart/form-data">
+
+                            <div asp-validation-summary="All"></div>
+
                             <div class="row">
                                 <div class="col-md-6 mb-4">
                                     <div data-mdb-input-init class="form-outline">
                                         <input type="text" asp-for="User.FirstName" class="form-control form-control-lg" placeholder="First Name" />
                                         <label class="form-label" asp-for="User.FirstName"></label>
+                                        <span asp-validation-for="User.FirstName" class="text-danger"></span>
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-4">
                                     <div data-mdb-input-init class="form-outline">
                                         <input type="text" asp-for="User.MiddleName" class="form-control form-control-lg" placeholder="Middle Name"/>
                                         <label class="form-label" asp-for="User.MiddleName"></label>
+                                        <span asp-validation-for="User.MiddleName" class="text-danger"></span>
                                     </div>
                                 </div>
                             </div>
@@ -102,27 +35,30 @@
                                     <div data-mdb-input-init class="form-outline">
                                         <input type="text" asp-for="User.LastName" class="form-control form-control-lg" placeholder="Last Name" />
                                         <label class="form-label" asp-for="User.LastName"></label>
+                                        <span asp-validation-for="User.LastName" class="text-danger"></span>
                                     </div>
                                 </div>
                             </div>                          
                             <div class="row">
                                 <div class="col-md-6 mb-4 d-flex align-items-center">
-                                    <div data-mdb-input-init class="form-outline datepicker w-100">
-                                        <input type="date" class="form-control form-control-lg" asp-for="User.DoB" placeholder=""/>
-                                        <label asp-for="User.DoB" class="form-label">DoB</label>
+                                    <div data-mdb-input-init class="form-outline">
+                                    <input type="text" asp-for="User.DoB" class="form-control form-control-lg" placeholder="mm/dd/yyyy" /> @* id for jQuery datepicker *@
+                                        <label asp-for="User.DoB" class="form-label"></label>
+                                        <span asp-validation-for="User.DoB" id="lblError" class="text-danger"></span>
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-4">
                                     <input type="text" asp-for="User.Address" class="form-control form-control-lg" placeholder="City, Street"/>
                                     <label class="form-label" asp-for="User.Address"></label>
+                                    <span asp-validation-for="User.Address" class="text-danger"></span>
                                 </div>                             
                             </div>
-
                             <div class="row">
                                 <div class="col-md-6 mb-4">
                                     <div data-mdb-input-init class="form-outline">
-                                        <input type="text" asp-for="User.Contact" class="form-control form-control-lg" placeholder="Phone Number"/>
+                                        <input type="text" asp-for="User.Contact" class="form-control form-control-lg" placeholder="Phone Number" />
                                         <label class="form-label" asp-for="User.Contact"></label>
+                                        <span asp-validation-for="User.Contact" class="text-danger"></span>
                                     </div>
                                 </div>  
                             </div>
@@ -136,22 +72,24 @@
                                             - accept attribute should limit any file browser on the client to only expose files with the specified extensions.
                                         *@
                                         <label class="form-label" asp-for="UserImage"></label>
+                                        <span asp-validation-for="UserImage" class="text-danger"></span>
                                     </div>
                                 </div>
                             </div>
-                           
-                            
                             <div class="mt-4 pt-2">
                                 <input class="btn btn-primary btn-lg" type="submit" style="width:100px; margin-right:8px;" value="Submit" />
-                                <a asp-page="/Users/Index"  class="btn btn-secondary btn-lg " style="width:100px;" value="Back">Back</a>
+                                <a asp-page="./Index"  class="btn btn-secondary btn-lg " style="width:100px;" value="Back">Back</a>
                             </div>
-                           
-                            
-                           
-
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    @section Scripts{
+        @{
+            <partial name="_ValidationScriptsPartial" />
+        }
+    }
+

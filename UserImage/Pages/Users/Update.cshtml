@@ -1,0 +1,93 @@
+﻿@page
+@model UserImage.Pages.Users.UpdateModel
+@{
+    ViewData["Title"] = "Update User";
+    //var imagepath = "/images/users";
+    //@Model.UserImage == Model.user.ImageName;
+}
+
+<div class="container py-5 h-100">
+    <div class="row justify-content-center align-items-center h-100">
+        <div class="col-12 col-lg-9 col-xl-7">
+            <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+                <div class="card-body p-4 p-md-5">
+                    <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Update User</h3>
+                    <form method="post">
+  
+                        <div asp-validation-summary="All"></div>
+                        <input hidden asp-for="user.UserId" />
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div data-mdb-input-init class="form-outline">
+                                    <img src="/images/users/@Model.user.ImageName" width="100px" height="100px" style="border-radius:50%" />
+                                    <input asp-for="user.ImageName" class="form-control" type="hidden"/> 
+                                    @* <label class="form-label" asp-for="user.ImageName"></label> *@
+                                    <span asp-validation-for="user.ImageName" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div data-mdb-input-init class="form-outline">
+                                    <input type="text" asp-for="user.FirstName" class="form-control form-control-lg"/>
+                                    <label class="form-label" asp-for="user.FirstName"></label>
+                                    <span asp-validation-for="user.FirstName" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div data-mdb-input-init class="form-outline">
+                                    <input type="text" asp-for="user.MiddleName" class="form-control form-control-lg"/>
+                                    <label class="form-label" asp-for="user.MiddleName"></label>
+                                    <span asp-validation-for="user.MiddleName" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div data-mdb-input-init class="form-outline">
+                                    <input type="text" asp-for="user.LastName" class="form-control form-control-lg"/>
+                                    <label class="form-label" asp-for="user.LastName"></label>
+                                    <span asp-validation-for="user.LastName" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-4 d-flex align-items-center">
+                                <div data-mdb-input-init class="form-outline">
+                                    <input type="text" id="txtDate" asp-for="user.DoB" class="form-control form-control-lg"/> @* id for jQuery datepicker *@
+                                    <label asp-for="user.DoB" class="form-label"></label>
+                                    <span asp-validation-for="user.DoB" id="lblError" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <input type="text" asp-for="user.Address" class="form-control form-control-lg"/>
+                                <label class="form-label" asp-for="user.Address"></label>
+                                <span asp-validation-for="user.Address" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div data-mdb-input-init class="form-outline">
+                                    <input type="tel" asp-for="user.Contact" class="form-control form-control-lg" id="phone" />
+                                    <label class="form-label" asp-for="user.Contact"></label>
+                                    <span asp-validation-for="user.Contact" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-4 pt-2">
+                            <input class="btn btn-warning btn-lg" type="submit" style="width:100px; margin-right:8px;" value="Update" />
+                            <a asp-page="./Index" class="btn btn-secondary btn-lg " style="width:100px;" value="Back">Back</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}
+

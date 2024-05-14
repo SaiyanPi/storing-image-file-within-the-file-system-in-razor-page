@@ -20,7 +20,7 @@ namespace UserImage.Pages.Users
         [BindProperty]
         public User User { get; set; }
 
-        [BindProperty, Display(Name = "User Image(jpg/png)")]
+        [BindProperty, Display(Name = "Image (jpg/png)")]
         public IFormFile UserImage { get; set; }
 
         public void OnGet()
@@ -34,14 +34,19 @@ namespace UserImage.Pages.Users
             {
                 return Page();
             }
-            User.ImageName = UserImage.FileName;
-            var imageFile = Path.Combine(_environment.WebRootPath, "images", "users", UserImage.FileName);
-            using var fileStream = new FileStream(imageFile, FileMode.Create);
-            await UserImage.CopyToAsync(fileStream);
-            _db.Users.Add(User);
-            await _db.SaveChangesAsync();
-
-            return RedirectToPage("./Index");
+            else
+            {
+                User.ImageName = UserImage.FileName;
+                var imageFile = Path.Combine(_environment.WebRootPath, "images", "users", UserImage.FileName);
+                using var fileStream = new FileStream(imageFile, FileMode.Create);
+                await UserImage.CopyToAsync(fileStream);
+                _db.Users.Add(User);
+                await _db.SaveChangesAsync();
+                TempData["success"] = "User Created Successfully."; // For toaster NOTIFICATION POP UPS
+                
+                return RedirectToPage("./Index");
+            }
+            
         }
     }
 }

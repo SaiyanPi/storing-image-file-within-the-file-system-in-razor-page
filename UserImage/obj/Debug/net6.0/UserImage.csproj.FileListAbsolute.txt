@@ -96,3 +96,4 @@ C:\Users\zlams\source\UserImage(Razor Pages)\UserImage\bin\Debug\net6.0\runtimes
 C:\Users\zlams\source\UserImage(Razor Pages)\UserImage\obj\Debug\net6.0\UserImage.csproj.AssemblyReference.cache
 C:\Users\zlams\source\UserImage(Razor Pages)\UserImage\obj\Debug\net6.0\UserImage.csproj.Up2Date
 C:\Users\zlams\source\UserImage(Razor Pages)\UserImage\obj\Debug\net6.0\scopedcss\Pages\Users\Create.cshtml.rz.scp.css
+C:\Users\zlams\source\UserImage(Razor Pages)\UserImage\obj\Debug\net6.0\UserImage.sourcelink.json

@@ -3,24 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\zlams\\source\\UserImage(Razor Pages)\\UserImage\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B795F3EC-53AC-4B5C-A44C-E7DAB75B4A82}|UserImage.csproj|c:\\users\\zlams\\source\\userimage(razor pages)\\userimage\\pages\\users\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B795F3EC-53AC-4B5C-A44C-E7DAB75B4A82}|UserImage.csproj|solutionrelative:pages\\users\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B795F3EC-53AC-4B5C-A44C-E7DAB75B4A82}|UserImage.csproj|c:\\users\\zlams\\source\\userimage(razor pages)\\userimage\\pages\\users\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B795F3EC-53AC-4B5C-A44C-E7DAB75B4A82}|UserImage.csproj|solutionrelative:pages\\users\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B795F3EC-53AC-4B5C-A44C-E7DAB75B4A82}|UserImage.csproj|c:\\users\\zlams\\source\\userimage(razor pages)\\userimage\\pages\\users\\update.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B795F3EC-53AC-4B5C-A44C-E7DAB75B4A82}|UserImage.csproj|solutionrelative:pages\\users\\update.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B795F3EC-53AC-4B5C-A44C-E7DAB75B4A82}|UserImage.csproj|c:\\users\\zlams\\source\\userimage(razor pages)\\userimage\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B795F3EC-53AC-4B5C-A44C-E7DAB75B4A82}|UserImage.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B795F3EC-53AC-4B5C-A44C-E7DAB75B4A82}|UserImage.csproj|c:\\users\\zlams\\source\\userimage(razor pages)\\userimage\\pages\\users\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B795F3EC-53AC-4B5C-A44C-E7DAB75B4A82}|UserImage.csproj|solutionrelative:pages\\users\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B795F3EC-53AC-4B5C-A44C-E7DAB75B4A82}|UserImage.csproj|c:\\users\\zlams\\source\\userimage(razor pages)\\userimage\\data\\usercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B795F3EC-53AC-4B5C-A44C-E7DAB75B4A82}|UserImage.csproj|solutionrelative:data\\usercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B795F3EC-53AC-4B5C-A44C-E7DAB75B4A82}|UserImage.csproj|c:\\users\\zlams\\source\\userimage(razor pages)\\userimage\\pages\\users\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B795F3EC-53AC-4B5C-A44C-E7DAB75B4A82}|UserImage.csproj|solutionrelative:pages\\users\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,66 +31,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\zlams\\source\\UserImage(Razor Pages)\\UserImage\\Pages\\Users\\Create.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Users\\Create.cshtml",
-              "ToolTip": "C:\\Users\\zlams\\source\\UserImage(Razor Pages)\\UserImage\\Pages\\Users\\Create.cshtml",
-              "RelativeToolTip": "Pages\\Users\\Create.cshtml",
-              "ViewState": "AQIAADwAAAAAAAAAAAAqwHwAAABRAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-30T15:06:41.469Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Create.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\zlams\\source\\UserImage(Razor Pages)\\UserImage\\Pages\\Users\\Create.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\Users\\Create.cshtml.cs",
-              "ToolTip": "C:\\Users\\zlams\\source\\UserImage(Razor Pages)\\UserImage\\Pages\\Users\\Create.cshtml.cs",
-              "RelativeToolTip": "Pages\\Users\\Create.cshtml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwC8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T15:13:04.969Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\zlams\\source\\UserImage(Razor Pages)\\UserImage\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",
               "ToolTip": "C:\\Users\\zlams\\source\\UserImage(Razor Pages)\\UserImage\\Models\\User.cs",
               "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAApAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABoAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-01T09:26:25.472Z",
+              "WhenOpened": "2024-05-13T15:02:04.689Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserContext.cs",
-              "DocumentMoniker": "C:\\Users\\zlams\\source\\UserImage(Razor Pages)\\UserImage\\Data\\UserContext.cs",
-              "RelativeDocumentMoniker": "Data\\UserContext.cs",
-              "ToolTip": "C:\\Users\\zlams\\source\\UserImage(Razor Pages)\\UserImage\\Data\\UserContext.cs",
-              "RelativeToolTip": "Data\\UserContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-01T11:14:07.458Z",
+              "DocumentIndex": 0,
+              "Title": "Update.cshtml",
+              "DocumentMoniker": "C:\\Users\\zlams\\source\\UserImage(Razor Pages)\\UserImage\\Pages\\Users\\Update.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Users\\Update.cshtml",
+              "ToolTip": "C:\\Users\\zlams\\source\\UserImage(Razor Pages)\\UserImage\\Pages\\Users\\Update.cshtml",
+              "RelativeToolTip": "Pages\\Users\\Update.cshtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAADgAAAB7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-13T13:42:22.178Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Index.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\zlams\\source\\UserImage(Razor Pages)\\UserImage\\Pages\\Users\\Index.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\Users\\Index.cshtml.cs",
-              "ToolTip": "C:\\Users\\zlams\\source\\UserImage(Razor Pages)\\UserImage\\Pages\\Users\\Index.cshtml.cs",
-              "RelativeToolTip": "Pages\\Users\\Index.cshtml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "Update.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\zlams\\source\\UserImage(Razor Pages)\\UserImage\\Pages\\Users\\Update.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Users\\Update.cshtml.cs",
+              "ToolTip": "C:\\Users\\zlams\\source\\UserImage(Razor Pages)\\UserImage\\Pages\\Users\\Update.cshtml.cs",
+              "RelativeToolTip": "Pages\\Users\\Update.cshtml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T13:21:17.142Z",
+              "WhenOpened": "2024-05-13T13:42:20.335Z",
               "EditorCaption": ""
             }
           ]
